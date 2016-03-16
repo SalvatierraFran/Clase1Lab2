@@ -17,7 +17,13 @@ namespace Clase2Ejemplo3
 
             int Numero;
 
-            Numero = int.Parse(Dato);
+            //Numero = int.Parse(Dato);
+
+            while(int.TryParse(Dato, out Numero)==false)
+            {
+                Console.WriteLine("Error. Reintente ingresando un numero");
+                Dato = Console.ReadLine();
+            }
         }
     }
 }
